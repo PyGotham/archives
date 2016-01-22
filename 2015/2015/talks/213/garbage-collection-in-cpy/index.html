@@ -1,0 +1,165 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <title>Talk - Garbage Collection in CPython - PyGotham 2015</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../static/css/app.css">
+
+    <meta name="msapplication-TileColor" content="#182833">
+    <meta name="msapplication-TileImage" content="/static/img/metro-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../../../static/img/apple-touch-icon.png">
+    <link rel="icon" href="../../../../static/img/favicon.png">
+
+    <script src="../../../../static/bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body class="">
+    <nav class="top-bar" data-topbar data-options="mobile_show_parent_link: false">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="../../../index.html">PyGotham 2015</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="index.html#"><span>Menu</span></a>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="right">
+          
+            <li class="About has-dropdown">
+              <a href="index.html#">About</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/code-of-conduct/index.html">Code of Conduct</a></li>
+                
+                <li><a href="../../../about/faq/index.html">FAQ</a></li>
+                
+                <li><a href="../../../about/privacy-policy/index.html">Privacy Policy</a></li>
+                
+                <li><a href="../../../about/social/index.html">Social Event</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Events has-dropdown">
+              <a href="index.html#">Events</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../index.html">Talk List</a></li>
+                
+                <li><a href="../../schedule/index.html">Talk Schedule</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Registration has-dropdown">
+              <a href="index.html#">Registration</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../registration/information/index.html">Information</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Speaking has-dropdown">
+              <a href="index.html#">Speaking</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../call-for-proposals/index.html">Call For Proposals</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Sponsors has-dropdown">
+              <a href="index.html#">Sponsors</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../sponsors.1.html">Sponsors</a></li>
+                
+                <li><a href="../../../sponsors/prospectus.1.html">Sponsorship Prospectus</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Venue has-dropdown">
+              <a href="index.html#">Venue</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/venue/index.html">Information</a></li>
+                
+              </ul>
+            </li>
+          
+
+          
+            
+          
+        </ul>
+      </section>
+    </nav>
+
+    <div id="content">
+      
+        
+  
+    
+  
+
+      
+
+      
+  <div class="row">
+    <h1>Garbage Collection in CPython</h1>
+
+    
+      <small>01:45 PM - 02:10 PM on August 15, 2015, Room 701</small>
+    
+
+    <h4>
+      <a href="../../../speakers/profile/323/index.html">
+        Andrée Monette
+      </a>
+    </h4>
+
+    <dl>
+      <dt>Audience level:
+      <dd>intermediate
+      
+      
+        <dt>Watch:
+        <dd><a href="http://youtu.be/P-8Z0-MhdQs">http://youtu.be/P-8Z0-MhdQs</a>
+      
+    </dl>
+
+    <h3>Description</h3>
+    <p>This talk is an overview of CPython's approach to memory management - how the life cycle of an object progresses, how objects are flagged for collection, and the tools that Python provides for manipulating the garbage collector's behavior. Along the way, we'll explore how to learn about Python language features through experimentation.</p>
+
+
+    
+      <h3>Abstract</h3>
+      <p>First, we'll explore what the role of a garbage collector is. We'll touch on the two major types of garbage collectors, tracing vs. reference counting, and convince ourselves that Python uses the latter through code that behaves differently under the two models.</p>
+<p>We'll explore how the del statement works, and when it might not have the behavior one expects. (Hint: if objects are deleted when their reference counts hit 0, what happens if you try to delete an object with more than one reference?) In exploring this, we'll encounter __del__ and its ability to provide a window into the behavior of objects when they're being garbage collected.</p>
+<p>We'll then look at the gc module, when manual memory management might be required and how it works in Python, and which aspects of Python garbage collection are implementation specific. We'll take a digression into why CPython's garbage collection features led to the development of the global interpreter lock. Along the way, we'll see an interesting interaction between the depth of the call stack and CPython's specific garbage collection implementation, and construct a simple fractal whose maximum size actually elucidates the value of a constant in the CPython source code.</p>
+<p>Finally, we'll use the garbage collector's behavior to implement depth-first search, and solve the eight queens problem using the Python finalizer.</p>
+
+    
+  </div>
+
+    </div>
+
+    <footer>
+      <section class="credits">
+        PyGotham 2015 is a production of <a href="http://bigapplepy.org">Big Apple Py</a>.<br>
+        Design by <a href="http://www.jessiesima.com">Jessie Sima</a>. Hosting provided by <a href="http://www.rackspace.com">Rackspace</a>.<br>
+        Questions? Comments? Please contact <a href="mailto:organizers@pygotham.org">organizers@pygotham.org</a>.<br>
+      </section>
+    </footer>
+
+    <script src="../../../../static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../../../static/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="../../../../static/js/app.js"></script>
+  </body>
+</html>

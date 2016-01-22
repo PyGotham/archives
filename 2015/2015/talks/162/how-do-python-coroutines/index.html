@@ -1,0 +1,169 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <title>Talk - How Do Python Coroutines Work? - PyGotham 2015</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../static/css/app.css">
+
+    <meta name="msapplication-TileColor" content="#182833">
+    <meta name="msapplication-TileImage" content="/static/img/metro-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../../../static/img/apple-touch-icon.png">
+    <link rel="icon" href="../../../../static/img/favicon.png">
+
+    <script src="../../../../static/bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body class="">
+    <nav class="top-bar" data-topbar data-options="mobile_show_parent_link: false">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="../../../index.html">PyGotham 2015</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="index.html#"><span>Menu</span></a>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="right">
+          
+            <li class="About has-dropdown">
+              <a href="index.html#">About</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/code-of-conduct/index.html">Code of Conduct</a></li>
+                
+                <li><a href="../../../about/faq/index.html">FAQ</a></li>
+                
+                <li><a href="../../../about/privacy-policy/index.html">Privacy Policy</a></li>
+                
+                <li><a href="../../../about/social/index.html">Social Event</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Events has-dropdown">
+              <a href="index.html#">Events</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../index.html">Talk List</a></li>
+                
+                <li><a href="../../schedule/index.html">Talk Schedule</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Registration has-dropdown">
+              <a href="index.html#">Registration</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../registration/information/index.html">Information</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Speaking has-dropdown">
+              <a href="index.html#">Speaking</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../call-for-proposals/index.html">Call For Proposals</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Sponsors has-dropdown">
+              <a href="index.html#">Sponsors</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../sponsors.1.html">Sponsors</a></li>
+                
+                <li><a href="../../../sponsors/prospectus.1.html">Sponsorship Prospectus</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Venue has-dropdown">
+              <a href="index.html#">Venue</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/venue/index.html">Information</a></li>
+                
+              </ul>
+            </li>
+          
+
+          
+            
+          
+        </ul>
+      </section>
+    </nav>
+
+    <div id="content">
+      
+        
+  
+    
+  
+
+      
+
+      
+  <div class="row">
+    <h1>How Do Python Coroutines Work?</h1>
+
+    
+      <small>04:00 PM - 04:25 PM on August 16, 2015, Room 702</small>
+    
+
+    <h4>
+      <a href="../../../speakers/profile/288/index.html">
+        A. Jesse Jiryu Davis
+      </a>
+    </h4>
+
+    <dl>
+      <dt>Audience level:
+      <dd>advanced
+      
+      
+        <dt>Watch:
+        <dd><a href="http://youtu.be/idLtMISlgy8">http://youtu.be/idLtMISlgy8</a>
+      
+    </dl>
+
+    <h3>Description</h3>
+    <p>Python 3's new “asyncio” module is an efficient async framework similar to Node. But unlike Node, it emphasizes a modern idiom called "coroutines", rather than callbacks. Coroutines promise the best of two worlds: the efficiency of callbacks, but with a natural and robust coding style similar to synchronous programming.</p>
+<p>In barely 30 minutes I live-code a Python 3 async framework. First, I show how an async framework uses non-blocking sockets, callbacks, and an event loop. This version of the framework is very efficient, but callbacks make a mess of the code. Therefore, I implement coroutines using Python generators and two classes called Future and Task, and update my little framework to use coroutines instead of callbacks.</p>
+<p>The live-coding demo isn't just a magic trick: watch to see how simply a coroutine-based async framework can be implemented, and gain a deep understanding of this miraculous new programming idiom in the Python 3 standard library.</p>
+
+
+    
+      <h3>Abstract</h3>
+      <p>Classical computer science focuses on CPU-bound problems. It is concerned with algorithms that complete computations quickly. But many networked programs spend their time not computing, but waiting for responses from remote machines. These I/O-bound programs present a very different challenge: wait for a huge number of network responses efficiently. The modern answer to this problem is asynchronous I/O, or “async”.</p>
+<p>In the early days of async frameworks, programmers put their logic in callback functions that waited for network responses, made network requests, and then scheduled more callbacks to handle the next round of responses. Complex code descended into an unmanageable mess of spaghetti callbacks. Such code defeated traditional exception handling, and it was intimidating to debug.</p>
+<p>Coroutines are a newly popular programming style. They are memory-efficient in I/O-bound applications, but they possess all the grace and simplicity callbacks lack. Best of all, we can keep using time-tested techniques for handling exceptions.</p>
+<p>To begin to understand how coroutines work, we look at an example of coroutine code in action. It is a Python generator, but what does that mean? We explore the Python interpreter’s generator implementation, how it uses a stack frame and instruction pointer in an unorthodox way to pause and resume the generator at will.</p>
+<p>Coroutines build upon generators: they can pause waiting for a network operation, and resume when the operation completes. I show a minimal implementation of the Future and Task classes used in asyncio to schedule coroutines.</p>
+<p>Coroutines can be factored into subcoroutines, the same as regular functions can. We see how Python 3’s “yield from” statement allows us to factor coroutines. Most comfortingly, exception-handling works with coroutines the same as with functions. We get a sane stack trace that shows where our program failed.</p>
+
+    
+  </div>
+
+    </div>
+
+    <footer>
+      <section class="credits">
+        PyGotham 2015 is a production of <a href="http://bigapplepy.org">Big Apple Py</a>.<br>
+        Design by <a href="http://www.jessiesima.com">Jessie Sima</a>. Hosting provided by <a href="http://www.rackspace.com">Rackspace</a>.<br>
+        Questions? Comments? Please contact <a href="mailto:organizers@pygotham.org">organizers@pygotham.org</a>.<br>
+      </section>
+    </footer>
+
+    <script src="../../../../static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../../../static/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="../../../../static/js/app.js"></script>
+  </body>
+</html>
