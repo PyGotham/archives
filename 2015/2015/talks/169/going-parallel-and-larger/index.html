@@ -1,0 +1,168 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <title>Talk - Going parallel and larger-than-memory with graphs - PyGotham 2015</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../static/css/app.css">
+
+    <meta name="msapplication-TileColor" content="#182833">
+    <meta name="msapplication-TileImage" content="/static/img/metro-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../../../static/img/apple-touch-icon.png">
+    <link rel="icon" href="../../../../static/img/favicon.png">
+
+    <script src="../../../../static/bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body class="">
+    <nav class="top-bar" data-topbar data-options="mobile_show_parent_link: false">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="../../../index.html">PyGotham 2015</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="index.html#"><span>Menu</span></a>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="right">
+          
+            <li class="About has-dropdown">
+              <a href="index.html#">About</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/code-of-conduct/index.html">Code of Conduct</a></li>
+                
+                <li><a href="../../../about/faq/index.html">FAQ</a></li>
+                
+                <li><a href="../../../about/privacy-policy/index.html">Privacy Policy</a></li>
+                
+                <li><a href="../../../about/social/index.html">Social Event</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Events has-dropdown">
+              <a href="index.html#">Events</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../index.html">Talk List</a></li>
+                
+                <li><a href="../../schedule/index.html">Talk Schedule</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Registration has-dropdown">
+              <a href="index.html#">Registration</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../registration/information/index.html">Information</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Speaking has-dropdown">
+              <a href="index.html#">Speaking</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../call-for-proposals/index.html">Call For Proposals</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Sponsors has-dropdown">
+              <a href="index.html#">Sponsors</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../sponsors.1.html">Sponsors</a></li>
+                
+                <li><a href="../../../sponsors/prospectus.1.html">Sponsorship Prospectus</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Venue has-dropdown">
+              <a href="index.html#">Venue</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/venue/index.html">Information</a></li>
+                
+              </ul>
+            </li>
+          
+
+          
+            
+          
+        </ul>
+      </section>
+    </nav>
+
+    <div id="content">
+      
+        
+  
+    
+  
+
+      
+
+      
+  <div class="row">
+    <h1>Going parallel and larger-than-memory with graphs</h1>
+
+    
+      <small>02:30 PM - 03:25 PM on August 16, 2015, Room 701</small>
+    
+
+    <h4>
+      <a href="../../../speakers/profile/282/index.html">
+        Blake Griffith
+      </a>
+    </h4>
+
+    <dl>
+      <dt>Audience level:
+      <dd>intermediate
+      
+      
+        <dt>Watch:
+        <dd><a href="http://youtu.be/yDlCNjtZvLw">http://youtu.be/yDlCNjtZvLw</a>
+      
+    </dl>
+
+    <h3>Description</h3>
+    <p>Dask is an open source, pure python library that enables parallel larger-than-memory computation in a novel way. We represent programs as Directed Acyclic Graphs (DAG) of function calls. These graphs are executed by dask's schedulers with different optimizations (synchronous, threaded, parallel, distributed-memory). Dask has modules geared towards data analysis, which provide a friendly interface to building graps. One module, dask.array, mimics a subset of NumPy operations. With dask.array we can work with NumPy like arrays that are larger than RAM and parallelization comes for free by leveraging the underlying DAG.</p>
+
+
+    
+      <h3>Abstract</h3>
+      <p>We layout core dask components: Directed Acyclic Graphs (DAG), schedulers, collections. Then demonstrate using dask.array with benchmarks and comparisons to NumPy.</p>
+<p>Tasks are python tuples whose first item is callable, the zero or more following items are its arguments. The arguments can also be tasks (Lisp users will recall S-expressions). Since a task can depend on other tasks, we can consider a task to be a vertex in a DAG.</p>
+<p>To "execute" a DAG, starting from the initial vertex, we want to traverse all vertexes in the graph. By inspecting a non-trivial graph we can see that there are several ways to traverse them, breadth-first, depth-first, in parallel, etc. So dask includes <em>schedulers</em> which are functions for executing DAG's. The implemented schedulers are: synchronous, threaded, multiprocessing, and distributed-memory.</p>
+<p>However writing a DAG of tasks by hand is not fun, and quickly becomes unmanageable. So dask has several <em>collections</em>, a collection provides some interface to creating dasks. We have dask.array as an answer to NumPy, dask.bag for semi-structured data (like JSON blobs), and dask.dataframe for pandas.dataframe.</p>
+<p>With dask.array we can do things NumPy cannot. Like work with arrays that are larger than RAM, and map functions in parallel over the array. An obvious API difference is creating dask.arrays requires a "chunks" argument which can be thought of as size of the chunks you want the array broken into. Each chunk should fit in memory. We demonstrate some motivating examples along with benchmarks.</p>
+<p>However dask.array only implements a subset of NumPy and is limited to operations that return predictably shaped arrays. So we can't do things like <cite>numpy.argwhere</cite>.</p>
+<p>You can find dask on github: <a href="https://github.com/ContinuumIO/dask">https://github.com/ContinuumIO/dask</a></p>
+
+    
+  </div>
+
+    </div>
+
+    <footer>
+      <section class="credits">
+        PyGotham 2015 is a production of <a href="http://bigapplepy.org">Big Apple Py</a>.<br>
+        Design by <a href="http://www.jessiesima.com">Jessie Sima</a>. Hosting provided by <a href="http://www.rackspace.com">Rackspace</a>.<br>
+        Questions? Comments? Please contact <a href="mailto:organizers@pygotham.org">organizers@pygotham.org</a>.<br>
+      </section>
+    </footer>
+
+    <script src="../../../../static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../../../static/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="../../../../static/js/app.js"></script>
+  </body>
+</html>

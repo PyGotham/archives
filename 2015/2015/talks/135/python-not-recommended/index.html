@@ -1,0 +1,165 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <title>Talk - Python Not Recommended - PyGotham 2015</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../static/css/app.css">
+
+    <meta name="msapplication-TileColor" content="#182833">
+    <meta name="msapplication-TileImage" content="/static/img/metro-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../../../static/img/apple-touch-icon.png">
+    <link rel="icon" href="../../../../static/img/favicon.png">
+
+    <script src="../../../../static/bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body class="">
+    <nav class="top-bar" data-topbar data-options="mobile_show_parent_link: false">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="../../../index.html">PyGotham 2015</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="index.html#"><span>Menu</span></a>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="right">
+          
+            <li class="About has-dropdown">
+              <a href="index.html#">About</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/code-of-conduct/index.html">Code of Conduct</a></li>
+                
+                <li><a href="../../../about/faq/index.html">FAQ</a></li>
+                
+                <li><a href="../../../about/privacy-policy/index.html">Privacy Policy</a></li>
+                
+                <li><a href="../../../about/social/index.html">Social Event</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Events has-dropdown">
+              <a href="index.html#">Events</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../index.html">Talk List</a></li>
+                
+                <li><a href="../../schedule/index.html">Talk Schedule</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Registration has-dropdown">
+              <a href="index.html#">Registration</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../registration/information/index.html">Information</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Speaking has-dropdown">
+              <a href="index.html#">Speaking</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../call-for-proposals/index.html">Call For Proposals</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Sponsors has-dropdown">
+              <a href="index.html#">Sponsors</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../sponsors.1.html">Sponsors</a></li>
+                
+                <li><a href="../../../sponsors/prospectus.1.html">Sponsorship Prospectus</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Venue has-dropdown">
+              <a href="index.html#">Venue</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/venue/index.html">Information</a></li>
+                
+              </ul>
+            </li>
+          
+
+          
+            
+          
+        </ul>
+      </section>
+    </nav>
+
+    <div id="content">
+      
+        
+  
+    
+  
+
+      
+
+      
+  <div class="row">
+    <h1>Python Not Recommended</h1>
+
+    
+      <small>11:45 AM - 12:10 PM on August 16, 2015, Room 705</small>
+    
+
+    <h4>
+      <a href="../../../speakers/profile/254/index.html">
+        Adam Forsyth
+      </a>
+    </h4>
+
+    <dl>
+      <dt>Audience level:
+      <dd>intermediate
+      
+      
+        <dt>Watch:
+        <dd><a href="http://youtu.be/q74pI8hb_1U">http://youtu.be/q74pI8hb_1U</a>
+      
+    </dl>
+
+    <h3>Description</h3>
+    <p>At Braintree, we've moved away from using Python. We've always used Ruby as our primary language, but Python used to be the go-to choice for things where Ruby wasn't a good fit. I will discuss the problems we've had with Python, why we decided to move to other solutions, and what we've chosen instead. Finally, I'll talk about where we're continuing to use Python and what the future holds.</p>
+
+
+    
+      <h3>Abstract</h3>
+      <p>Braintree is a Ruby shop. By default, we use Ruby and Rails for projects. We also use Ruby-based projects for much of our tooling, including puppet, capistrano, and rake. However, we strongly believe in using the right tool for the job. What that means has evolved over time, and I'll discuss what solutions we chose in the past as well as our current choices.</p>
+<p>So what's it like doing Python at a Ruby shop? You get lots of jokes about language features Ruby has but Python lacks and lots of disbelief that Python will survive the 2/3 split. People also tend to apply the best practices and conventions of Ruby to Python code as if they were the same. Python's major inroad at Braintree has been, surprisingly enough, as a platform for high-concurrency situations. This is a direct result of the power of Tornado as a platform for asynchronous I/O. It also helps that many Python is very approachable and many developers have at least some experience with it.</p>
+<p>Braintree has three pieces of our infrastructure using Python and Tornado -- an incoming request proxy; an outgoing request proxy; and a webook delivery service. They've served us well for 3+ years but all suffer from a number of problems. The outdated concurrency features of CPython / Python 2 as well as our lack of experience with and commitment to Tornado have always been an issue. As the meat of the talk, I'll speak in depth about the other issues we've encountered with each of the three applications and our short- and long- term solutions to the problems.</p>
+<p>The state as of the end of 2014 appeared dire for Python at Braintree. All the old Python code in our stack is on the way out, and Python has been specifically recommended against for new projects. Our Python client library is used by some of our largest merchants, and is ready for the future by supporting Python 2.6+ and Python 3.3+ in a single codebase. We also have a vibrant Python community at Venmo, our sister company. Both Braintree and Venmo support Python by attending, hosting, sponsoring, and speaking at meetups, conferences, and other events in Chicago, New York, and elsewhere. At Braintree, our Data Science team uses Python almost exclusively and they're becoming a bigger part of our business every day. We also use custom tooling written in Python to manage our infrastructure.</p>
+
+    
+  </div>
+
+    </div>
+
+    <footer>
+      <section class="credits">
+        PyGotham 2015 is a production of <a href="http://bigapplepy.org">Big Apple Py</a>.<br>
+        Design by <a href="http://www.jessiesima.com">Jessie Sima</a>. Hosting provided by <a href="http://www.rackspace.com">Rackspace</a>.<br>
+        Questions? Comments? Please contact <a href="mailto:organizers@pygotham.org">organizers@pygotham.org</a>.<br>
+      </section>
+    </footer>
+
+    <script src="../../../../static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../../../static/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="../../../../static/js/app.js"></script>
+  </body>
+</html>

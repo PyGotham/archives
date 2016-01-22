@@ -1,0 +1,167 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <title>Talk - An Iterative Approach to Inverse Problems using Python&#39;s Numpy - PyGotham 2015</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../static/css/app.css">
+
+    <meta name="msapplication-TileColor" content="#182833">
+    <meta name="msapplication-TileImage" content="/static/img/metro-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../../../static/img/apple-touch-icon.png">
+    <link rel="icon" href="../../../../static/img/favicon.png">
+
+    <script src="../../../../static/bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body class="">
+    <nav class="top-bar" data-topbar data-options="mobile_show_parent_link: false">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="../../../index.html">PyGotham 2015</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="index.html#"><span>Menu</span></a>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="right">
+          
+            <li class="About has-dropdown">
+              <a href="index.html#">About</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/code-of-conduct/index.html">Code of Conduct</a></li>
+                
+                <li><a href="../../../about/faq/index.html">FAQ</a></li>
+                
+                <li><a href="../../../about/privacy-policy/index.html">Privacy Policy</a></li>
+                
+                <li><a href="../../../about/social/index.html">Social Event</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Events has-dropdown">
+              <a href="index.html#">Events</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../index.html">Talk List</a></li>
+                
+                <li><a href="../../schedule/index.html">Talk Schedule</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Registration has-dropdown">
+              <a href="index.html#">Registration</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../registration/information/index.html">Information</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Speaking has-dropdown">
+              <a href="index.html#">Speaking</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../call-for-proposals/index.html">Call For Proposals</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Sponsors has-dropdown">
+              <a href="index.html#">Sponsors</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../sponsors.1.html">Sponsors</a></li>
+                
+                <li><a href="../../../sponsors/prospectus.1.html">Sponsorship Prospectus</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Venue has-dropdown">
+              <a href="index.html#">Venue</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/venue/index.html">Information</a></li>
+                
+              </ul>
+            </li>
+          
+
+          
+            
+          
+        </ul>
+      </section>
+    </nav>
+
+    <div id="content">
+      
+        
+  
+    
+  
+
+      
+
+      
+  <div class="row">
+    <h1>An Iterative Approach to Inverse Problems using Python&#39;s Numpy</h1>
+
+    
+      <small>11:45 AM - 12:10 PM on August 16, 2015, Room 702</small>
+    
+
+    <h4>
+      <a href="../../../speakers/profile/328/index.html">
+        Katya Vasilaky
+      </a>
+    </h4>
+
+    <dl>
+      <dt>Audience level:
+      <dd>intermediate
+      
+      
+        <dt>Watch:
+        <dd><a href="http://youtu.be/Mhk-71Xy9Qk">http://youtu.be/Mhk-71Xy9Qk</a>
+      
+    </dl>
+
+    <h3>Description</h3>
+    <p>This is a talk about inverse problems and improving on past algorithms that have focused on inverse problems in math, data science, tomography, and image processing. We use a new iterative method coded in Python's Numpy and show it's ability to recover images compared to previous approaches.</p>
+
+
+    
+      <h3>Abstract</h3>
+      <p>This talk will fall in the realm of data, data processing and data science.</p>
+<p>Inverse problems commonly occur in image processing, statistical inference, tomography, and any field where one wants to compute some interior properties using exterior meseasurements. Linear regression would be one such problem which solves the least squares problem (where the solution to the least squares problem requires the inversion of a matrix X in order to solve for the optimal beta parameter estimates, b).</p>
+<p>In many such problems the data frame or matrix X is ill-conditioned, meaning the matrix iself is close to singular (e.g. a Hilbert matrix that has several close to dependent columns),and the solution, b, is therefore is noisy. A small perturbation in the matrix X will lead to wild adjustements in the solution, b, as is well-known.</p>
+<p>One way to deal with such instability is to regularize the problem and solve a "nearby" problem using Lasso methods or the more general Tikhanov reguarlization problem, which add a penalty, lambda, to the optimizaiton problem. However, currently, no efficient method exists for searching for lambda.</p>
+<p>In our new innovative method, we have derived an iterative approach to solving the general Tikhanov regularization problem, which converges to the noiseless solution, does not depend strongly on the choice of lambda, and yet still avoids the inversion problem.</p>
+<p>This alogirithm is written in a few lines of code using Python's numpy package, and primarily relies on the SVD composition. The solution is applicable to many fields in image processing and data, and the code, as we'll see in the talk, is quite simple.</p>
+
+    
+  </div>
+
+    </div>
+
+    <footer>
+      <section class="credits">
+        PyGotham 2015 is a production of <a href="http://bigapplepy.org">Big Apple Py</a>.<br>
+        Design by <a href="http://www.jessiesima.com">Jessie Sima</a>. Hosting provided by <a href="http://www.rackspace.com">Rackspace</a>.<br>
+        Questions? Comments? Please contact <a href="mailto:organizers@pygotham.org">organizers@pygotham.org</a>.<br>
+      </section>
+    </footer>
+
+    <script src="../../../../static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../../../static/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="../../../../static/js/app.js"></script>
+  </body>
+</html>

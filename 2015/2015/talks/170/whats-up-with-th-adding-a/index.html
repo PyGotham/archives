@@ -1,0 +1,164 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <title>Talk - What&#39;s up with th@? Adding an Operator to CPython - PyGotham 2015</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../../static/css/app.css">
+
+    <meta name="msapplication-TileColor" content="#182833">
+    <meta name="msapplication-TileImage" content="/static/img/metro-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../../../static/img/apple-touch-icon.png">
+    <link rel="icon" href="../../../../static/img/favicon.png">
+
+    <script src="../../../../static/bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body class="">
+    <nav class="top-bar" data-topbar data-options="mobile_show_parent_link: false">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="../../../index.html">PyGotham 2015</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="index.html#"><span>Menu</span></a>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="right">
+          
+            <li class="About has-dropdown">
+              <a href="index.html#">About</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/code-of-conduct/index.html">Code of Conduct</a></li>
+                
+                <li><a href="../../../about/faq/index.html">FAQ</a></li>
+                
+                <li><a href="../../../about/privacy-policy/index.html">Privacy Policy</a></li>
+                
+                <li><a href="../../../about/social/index.html">Social Event</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Events has-dropdown">
+              <a href="index.html#">Events</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../index.html">Talk List</a></li>
+                
+                <li><a href="../../schedule/index.html">Talk Schedule</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Registration has-dropdown">
+              <a href="index.html#">Registration</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../registration/information/index.html">Information</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Speaking has-dropdown">
+              <a href="index.html#">Speaking</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../call-for-proposals/index.html">Call For Proposals</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Sponsors has-dropdown">
+              <a href="index.html#">Sponsors</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../sponsors.1.html">Sponsors</a></li>
+                
+                <li><a href="../../../sponsors/prospectus.1.html">Sponsorship Prospectus</a></li>
+                
+              </ul>
+            </li>
+          
+            <li class="Venue has-dropdown">
+              <a href="index.html#">Venue</a>
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/venue/index.html">Information</a></li>
+                
+              </ul>
+            </li>
+          
+
+          
+            
+          
+        </ul>
+      </section>
+    </nav>
+
+    <div id="content">
+      
+        
+  
+    
+  
+
+      
+
+      
+  <div class="row">
+    <h1>What&#39;s up with th@? Adding an Operator to CPython</h1>
+
+    
+      <small>01:15 PM - 01:40 PM on August 16, 2015, Room 702</small>
+    
+
+    <h4>
+      <a href="../../../speakers/profile/259/index.html">
+        John Hergenroeder
+      </a>
+    </h4>
+
+    <dl>
+      <dt>Audience level:
+      <dd>intermediate
+      
+      
+        <dt>Watch:
+        <dd><a href="http://youtu.be/dQF1hBuQYZE">http://youtu.be/dQF1hBuQYZE</a>
+      
+    </dl>
+
+    <h3>Description</h3>
+    <p>How do you add an operator to CPython? We'll use the recent addition of the '@' operator in 3.5a1 to answer that question and dig into the CPython internals in the process, touching on how the interpreter goes from source to execution.</p>
+
+
+    
+      <h3>Abstract</h3>
+      <p>We'll start by considering our goal: adding a new operator to the CPython implementation of Python. As a case study, we'll use the new infix matrix multiplication operator, '@', which debuted in the release of 3.5a1. In the process, we'll dig into how CPython goes from source code to execution and touch on the tools that the standard library provides for investigating the compilation and interpretation process. Our investigation will also illustrate what it takes to experiment with your own changes to the Python language and cPython.</p>
+<p>Adding a new operator requires a broad understanding of how the CPython interpreter runs Python code, going from source code text to tokens, to a parse tree, to an abstract syntax tree (AST), to bytecode, and finally to execution. We'll talk about each of those steps briefly before looking at the changeset that was merged for the operator's inclusion in 3.5.</p>
+<p>While the changeset is substantial, we can separate it into four broad changes: updating the grammar used for lexing and parsing, adding a new node type for the AST, extending the internal type object to support matrix multiplication operation definitions, and finally defining and implementing the new bytecodes the interpreter will execute. After walking through those changes, we'll take a moment to note some of the neat tools you can use to investigate CPython on your own.</p>
+
+    
+  </div>
+
+    </div>
+
+    <footer>
+      <section class="credits">
+        PyGotham 2015 is a production of <a href="http://bigapplepy.org">Big Apple Py</a>.<br>
+        Design by <a href="http://www.jessiesima.com">Jessie Sima</a>. Hosting provided by <a href="http://www.rackspace.com">Rackspace</a>.<br>
+        Questions? Comments? Please contact <a href="mailto:organizers@pygotham.org">organizers@pygotham.org</a>.<br>
+      </section>
+    </footer>
+
+    <script src="../../../../static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../../../static/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="../../../../static/js/app.js"></script>
+  </body>
+</html>
