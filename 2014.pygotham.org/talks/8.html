@@ -9,65 +9,65 @@
 
 
   <head>
-    
+
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Talk - Getting Rich with Comparison Methods - PyGotham 2014</title>
-    
-  
+
+
     <meta name="viewport" content="width=device-width" /><meta charset="utf-8">
-    
+
 
   <meta name="msapplication-TileColor" content="#79d6db">
   <meta name="msapplication-TileImage" content="/static/img/metro-icon.png">
   <link rel="apple-touch-icon-precomposed" href="../static/img/apple-touch-icon.png">
   <link rel="icon" href="../static/img/favicon.png">
 
-  
-    
-  
+
+
+
     <link rel="stylesheet" href="../static/gen/css/foundation.min.css%3F897a9ed3.css">
-  
 
-  
 
-    
-    
-  
-    
+
+
+
+
+
+
 
   <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 
-  
+
     <link rel="stylesheet" href="../static/gen/css/screen.min.css%3F91312ff0.css" media="screen, projection">
-  
-  
+
+
     <link rel="stylesheet" href="../static/gen/css/print.min.css%3Fd41d8cd9.css" media="print">
-  
 
 
-    
+
+
       <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
-    
 
-    
-      
+
+
+
       <!-- IE Fix for HTML5 Tags -->
       <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
       <![endif]-->
-      
-    
 
-    
+
+
+
   </head>
   <body>
-  
-    
+
+
   <div id="wrapper" class="">
-    
+
       <header>
-        
+
           <nav class="top-bar" data-topbar>
             <ul class="title-area">
               <li class="name">
@@ -88,7 +88,7 @@
                     <li><a href="../about/privacy-policy.html">Privacy Policy</a></li>
                   </ul>
                 </li>
-                
+
                   <li class="events has-dropdown">
                     <a href="8.html#">Events</a>
                     <ul class="dropdown">
@@ -101,12 +101,12 @@
                       </li>
                     </ul>
                   </li>
-                
+
                 <li class="speaking has-dropdown">
                   <a href="8.html#">Speaking</a>
                   <ul class="dropdown">
                     <li><a href="call-for-proposals.html">Call for Proposals</a></li>
-                    
+
                   </ul>
                 </li>
                 <li><a href="../venue.html">Venue</a></li>
@@ -114,7 +114,6 @@
                   <a href="8.html#">Sponsors</a>
                   <ul class="dropdown">
                     <li><a href="../sponsors.html">Sponsors</a></li>
-                    <li><a href="../sponsors/apply.html">Apply to be a Sponsor</a></li>
                     <li><a href="../sponsors/prospectus.html">Sponsorship Prospectus</a></li>
                   </ul>
                 </li>
@@ -123,38 +122,38 @@
                   <a href="8.html#">Registration</a>
                   <ul class="dropdown">
                     <li><a href="../registration/information.html">Information</a></li>
-                    
+
                       <li><a href="https://pygotham2014.eventbrite.com">Register</a></li>
-                    
+
                   </ul>
                 </li>
-                
+
               </ul>
             </section>
           </nav>
-        
+
       </header>
-    
 
-    
+
+
       <div class="content">
-        
-          
-  
-    
-  
 
-        
 
-        
 
-        
+
+
+
+
+
+
+
+
   <div class="row">
     <h1>Getting Rich with Comparison Methods</h1>
 
-    
+
       <small>10:15 AM - 11:00 AM on August 16, 2014, Room 704</small>
-    
+
 
     <h4>
       <a href="../speakers/profile/41.html">
@@ -165,11 +164,11 @@
     <dl>
       <dt>Audience level:
       <dd>intermediate
-      
-      
+
+
         <dt>Watch:
         <dd><a href="http://youtu.be/RcVQveUjq8U">http://youtu.be/RcVQveUjq8U</a>
-      
+
     </dl>
 
     <h3>Description</h3>
@@ -179,7 +178,7 @@ There are no implied relationships among the comparison operators. The truth of 
 <p>Mind == blown and mind != blown.  In <cite>Getting Rich with Comparison Methods</cite> we'll start by learning how to avoid common and costly bugs in your rich comparison methods, learn a bit about which methods are executed in comparisons and why, and then go beyond symmetrical comparisons exploring some of the ways we can take full advantage of asymmetrical comparison methods.</p>
 
 
-    
+
       <h3>Abstract</h3>
       <p>"Getting Rich with Comparison Methods" starts with what most engineers are trying to do when they first read the data model documentation for rich comparison methods, make comparisons function "as expected", returning truthy and falsey values. A common case is an object with an <cite>id</cite> attribute, and rather than: self == other being translated into: self is other, you'd prefer it to turn into self.id == other.id. Conversely you'd like self != to translate to: self.id != other.id, and you might go so far as to define '&gt;', '&gt;=', '&lt;' and '&lt;=' too. Straight-forward as this seems there are some pitfalls to avoid, and (of course) some standard library goodies that make avoiding these pitfalls as easy as decorating your class.</p>
 <p>Once you've handled this basic use-case, you'll eventually compare your object to an object of a different type, and you'll start to wonder exactly how Python chooses the rich comparison method of record. Grasping how order and inheritence of objects in a comparison play into the resolution of the rich comparison method will allow you to write more resiliant c
@@ -188,38 +187,38 @@ ode, and will lead you to understand the importance of extensive testing wheneve
 nctionality (like the kind found in SQLALchemy, just to name one).</p>
 <p>By the time you leave "Getting Rich with Comparison Methods" you should be comfortable using rich comparison methods to solve a variety of problems, you should be able to write elegant tests for your comparison method code, and you'll know what they say about assumptions.</p>
 
-    
+
   </div>
 
       </div>
 
-      
+
         <footer>
           <h4>PyGotham 2014</h4>
           <section class="credits">
             PyGotham 2014 is a production of <a href="http://bigapplepy.org">Big Apple Py</a>.<br>
             Design by <a href="http://sonjaleix.com">Sonja Leix</a>. Hosting provided by <a href="http://www.rackspace.com">Rackspace</a>.<br>
-            Questions? Comments? Please contact <a href="mailto:pygotham@googlegroups.com">pygotham@googlegroups.com</a>.<br>
+            Questions? Comments? Please contact <a href="mailto:organizers@pygotham.org">organizers@pygotham.org</a>.<br>
           </section>
         </footer>
-      
-    
+
+
   </div>
 
 
-    
+
   <script src="http://cdnjs.cloudflare.com/ajax/libs/fastclick/0.6.11/fastclick.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-placeholder/2.0.7/jquery.placeholder.min.js"></script>
 
-  
-    <script src="../static/gen/js/foundation.min.js%3F2bbd4644"></script>
-  
 
-    
-    
-  
+    <script src="../static/gen/js/foundation.min.js%3F2bbd4644"></script>
+
+
+
+
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -229,9 +228,9 @@ nctionality (like the kind found in SQLALchemy, just to name one).</p>
       ga('create', 'UA-49638124-1', 'pygotham.org');
       ga('send', 'pageview');
     </script>
-  
 
-  
+
+
   </body>
 
 </html>

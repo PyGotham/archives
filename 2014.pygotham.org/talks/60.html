@@ -9,65 +9,65 @@
 
 
   <head>
-    
+
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <title>Talk - Asyncronous Web Scraping with Asyncio - PyGotham 2014</title>
-    
-  
+
+
     <meta name="viewport" content="width=device-width" /><meta charset="utf-8">
-    
+
 
   <meta name="msapplication-TileColor" content="#79d6db">
   <meta name="msapplication-TileImage" content="/static/img/metro-icon.png">
   <link rel="apple-touch-icon-precomposed" href="../static/img/apple-touch-icon.png">
   <link rel="icon" href="../static/img/favicon.png">
 
-  
-    
-  
+
+
+
     <link rel="stylesheet" href="../static/gen/css/foundation.min.css%3F897a9ed3.css">
-  
 
-  
 
-    
-    
-  
-    
+
+
+
+
+
+
 
   <link href="http://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 
-  
+
     <link rel="stylesheet" href="../static/gen/css/screen.min.css%3F91312ff0.css" media="screen, projection">
-  
-  
+
+
     <link rel="stylesheet" href="../static/gen/css/print.min.css%3Fd41d8cd9.css" media="print">
-  
 
 
-    
+
+
       <script src="http://cdnjs.cloudflare.com/ajax/libs/modernizr/2.7.1/modernizr.min.js"></script>
-    
 
-    
-      
+
+
+
       <!-- IE Fix for HTML5 Tags -->
       <!--[if lt IE 9]>
         <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
       <![endif]-->
-      
-    
 
-    
+
+
+
   </head>
   <body>
-  
-    
+
+
   <div id="wrapper" class="">
-    
+
       <header>
-        
+
           <nav class="top-bar" data-topbar>
             <ul class="title-area">
               <li class="name">
@@ -88,7 +88,7 @@
                     <li><a href="../about/privacy-policy.html">Privacy Policy</a></li>
                   </ul>
                 </li>
-                
+
                   <li class="events has-dropdown">
                     <a href="60.html#">Events</a>
                     <ul class="dropdown">
@@ -101,12 +101,12 @@
                       </li>
                     </ul>
                   </li>
-                
+
                 <li class="speaking has-dropdown">
                   <a href="60.html#">Speaking</a>
                   <ul class="dropdown">
                     <li><a href="call-for-proposals.html">Call for Proposals</a></li>
-                    
+
                   </ul>
                 </li>
                 <li><a href="../venue.html">Venue</a></li>
@@ -114,7 +114,6 @@
                   <a href="60.html#">Sponsors</a>
                   <ul class="dropdown">
                     <li><a href="../sponsors.html">Sponsors</a></li>
-                    <li><a href="../sponsors/apply.html">Apply to be a Sponsor</a></li>
                     <li><a href="../sponsors/prospectus.html">Sponsorship Prospectus</a></li>
                   </ul>
                 </li>
@@ -123,38 +122,38 @@
                   <a href="60.html#">Registration</a>
                   <ul class="dropdown">
                     <li><a href="../registration/information.html">Information</a></li>
-                    
+
                       <li><a href="https://pygotham2014.eventbrite.com">Register</a></li>
-                    
+
                   </ul>
                 </li>
-                
+
               </ul>
             </section>
           </nav>
-        
+
       </header>
-    
 
-    
+
+
       <div class="content">
-        
-          
-  
-    
-  
 
-        
 
-        
 
-        
+
+
+
+
+
+
+
+
   <div class="row">
     <h1>Asyncronous Web Scraping with Asyncio</h1>
 
-    
+
       <small>04:15 PM - 05:15 PM on August 16, 2014, Room 701</small>
-    
+
 
     <h4>
       <a href="../speakers/profile/55.html">
@@ -165,11 +164,11 @@
     <dl>
       <dt>Audience level:
       <dd>intermediate
-      
+
         <dt>Category:
         <dd>Web Development
-      
-      
+
+
     </dl>
 
     <h3>Description</h3>
@@ -177,45 +176,45 @@
 <p>Doing an I/O operation blocks the program in Python. In order to remove this disadvantage and provide asynchronous programming capabilities, new <cite>asyncio</cite> (asynchronous i/o) module introduced to the standard library in Python 3.4.</p>
 
 
-    
+
       <h3>Abstract</h3>
       <p>Asynchronous proramming can be loosely defined that the program can do different tasks while it waits for I/O operation to complete. It is an important advantage as I/O is slow and CPU can operate on other tasks while I/O is being executed. This not only removes waiting for I/O to complete but tasks that are not I/O bounded can be done efficiently.</p>
 <p>Doing an I/O operation blocks the program in Python. In order to remove this disadvantage and provide asynchronous programming capabilities, new <cite>asyncio</cite> (asynchronous i/o) module introduced to the standard library in Python 3.4.</p>
 <p>Web scraping could be considered as I/O bounded task as program needs to wait for the server to respond to process the webpage. However, parsing and extracting the structured data from the raw html is the most time consuming part whereas the I/O bounded retrieving web pages is not. Therefore, asynchronous I/O is a natural fit for web scraping and processing web pages. While waiting other pages to be scraped, one could parse and extract the relevant parts from the web pages asynchronously.s</p>
 <p>In this tutorial, I will introduce some asynchronous programming concepts and show its capabilities and advantages. Then, I will introduce <cite>asyncio</cite> module and provide an overview of the module, focusing on coroutines and event loops. In the demonstration and hands on session, we will scrape web pages from different sources and process them to get (semi)structured data, all asynchronously.</p>
 
-    
+
   </div>
 
       </div>
 
-      
+
         <footer>
           <h4>PyGotham 2014</h4>
           <section class="credits">
             PyGotham 2014 is a production of <a href="http://bigapplepy.org">Big Apple Py</a>.<br>
             Design by <a href="http://sonjaleix.com">Sonja Leix</a>. Hosting provided by <a href="http://www.rackspace.com">Rackspace</a>.<br>
-            Questions? Comments? Please contact <a href="mailto:pygotham@googlegroups.com">pygotham@googlegroups.com</a>.<br>
+            Questions? Comments? Please contact <a href="mailto:organizers@pygotham.org">organizers@pygotham.org</a>.<br>
           </section>
         </footer>
-      
-    
+
+
   </div>
 
 
-    
+
   <script src="http://cdnjs.cloudflare.com/ajax/libs/fastclick/0.6.11/fastclick.min.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.0/jquery.cookie.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-placeholder/2.0.7/jquery.placeholder.min.js"></script>
 
-  
-    <script src="../static/gen/js/foundation.min.js%3F2bbd4644"></script>
-  
 
-    
-    
-  
+    <script src="../static/gen/js/foundation.min.js%3F2bbd4644"></script>
+
+
+
+
+
     <script>
       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -225,9 +224,9 @@
       ga('create', 'UA-49638124-1', 'pygotham.org');
       ga('send', 'pageview');
     </script>
-  
 
-  
+
+
   </body>
 
 </html>

@@ -1,0 +1,166 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <title>Talk - Building a data processing pipeline in Python - PyGotham 2015</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/css/app.css">
+
+    <meta name="msapplication-TileColor" content="#182833">
+    <meta name="msapplication-TileImage" content="../../../static/img/metro-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../../static/img/apple-touch-icon.png">
+    <link rel="icon" href="../../../static/img/favicon.png">
+
+    <script src="../../../static/bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body class="">
+    <nav class="top-bar" data-topbar data-options="mobile_show_parent_link: false">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="../../../index.html">PyGotham 2015</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="index.html#"><span>Menu</span></a>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="right">
+
+            <li class="About has-dropdown">
+              <a href="index.html#">About</a>
+              <ul class="dropdown">
+
+                <li><a href="../../../about/code-of-conduct/index.html">Code of Conduct</a></li>
+
+                <li><a href="../../../about/faq/index.html">FAQ</a></li>
+
+                <li><a href="../../../about/privacy-policy/index.html">Privacy Policy</a></li>
+
+                <li><a href="../../../about/social/index.html">Social Event</a></li>
+
+              </ul>
+            </li>
+
+            <li class="Events has-dropdown">
+              <a href="index.html#">Events</a>
+              <ul class="dropdown">
+
+                <li><a href="../../index.html">Talk List</a></li>
+
+                <li><a href="../../schedule/index.html">Talk Schedule</a></li>
+
+              </ul>
+            </li>
+
+            <li class="Registration has-dropdown">
+              <a href="index.html#">Registration</a>
+              <ul class="dropdown">
+
+                <li><a href="../../../registration/information/index.html">Information</a></li>
+
+              </ul>
+            </li>
+
+            <li class="Speaking has-dropdown">
+              <a href="index.html#">Speaking</a>
+              <ul class="dropdown">
+
+                <li><a href="../../call-for-proposals/index.html">Call For Proposals</a></li>
+
+              </ul>
+            </li>
+
+            <li class="Sponsors has-dropdown">
+              <a href="index.html#">Sponsors</a>
+              <ul class="dropdown">
+
+                <li><a href="../../../sponsors/index.html">Sponsors</a></li>
+
+                <li><a href="../../../sponsors/prospectus/index.html">Sponsorship Prospectus</a></li>
+
+              </ul>
+            </li>
+
+            <li class="Venue has-dropdown">
+              <a href="index.html#">Venue</a>
+              <ul class="dropdown">
+
+                <li><a href="../../../about/venue/index.html">Information</a></li>
+
+              </ul>
+            </li>
+
+
+
+
+
+        </ul>
+      </section>
+    </nav>
+
+    <div id="content">
+
+
+
+
+
+
+
+
+
+  <div class="row">
+    <h1>Building a data processing pipeline in Python</h1>
+
+
+      <small>01:15 PM - 01:40 PM on August 15, 2015, Room 704</small>
+
+
+    <h4>
+      <a href="../../../speakers/profile/306/index.html">
+        Joe Cabrera
+      </a>
+    </h4>
+
+    <dl>
+      <dt>Audience level:
+      <dd>intermediate
+
+
+        <dt>Watch:
+        <dd><a href="http://youtu.be/AlkuzBbiKk0">http://youtu.be/AlkuzBbiKk0</a>
+
+    </dl>
+
+    <h3>Description</h3>
+    <p>Recently, the growth of publicly available data has been enormous. Python has a number of libraries and tool to aid you in building your data processing pipeline. These tools include Celery, Requests, BeautifulSoup and SQL-Alchemy. When combined together you can build an efficient and scalable data processing pipeline.</p>
+
+
+
+      <h3>Abstract</h3>
+      <p>Recently, the growth of publicly available data has been enormous. In the best cases this data is available in nicely formatted datasets. However, many times this data is made available piece-wise through a collection of poorly formatted documents scattered across the web. In these cases it is necessary to build a data processing pipeline.</p>
+<p>In many cases, this data is available online on a publicly accessible site with links to each document in the data collection. Sometimes this data is static and other times new documents are added frequently. In the case of new documents appearing frequently, it is necessary to construct a recurring job to grab the new documents as they become available in addition to your initial data ingestion. In my pipeline, Celery is used to orchestrate every element of the pipeline including document download, ingestion, and cleansing. There are even two separate tasks for ingesting initial data and ingesting newly updated documents. The Requests library is used to download all the documents. HTTP requests are built to respect rate-limiting guidelines and Python 3's concurrent futures are used to parallelize requests.</p>
+<p>Once you have successfully implemented your document download task, you will need to perform some parsing to retrieve the necessary facts from the documents. Many times you can leverage existing tools such as BeautifulSoup to aid in document parsing but sometimes you may need to build your own. At this point you may want to either store the raw data to it's final destination, say a database or file-store or perform further data cleansing. In my pipeline, I store the raw data to it's final destination, a database and then kick off a scheduled task to cleanse my data. My data cleansing task cleans up and aggregates raw data to be re-inserted to the database in a different table.</p>
+<p>As your demand for processing power grows, Celery will allow your task queue to be distributed across multiple worker nodes. To house your growing data, SQL-Alchemy will allow new tables to be easily added to your database. At some point in you will most likely need to shard your database and SQL-Alchemy has a basic sharding API.</p>
+<p>Python has a number of libraries and tool to aid you in building your data processing pipeline. Combined together you can build an efficient and scalable data processing pipeline.</p>
+
+
+  </div>
+
+    </div>
+
+    <footer>
+      <section class="credits">
+        PyGotham 2015 is a production of <a href="http://bigapplepy.org">Big Apple Py</a>.<br>
+        Design by <a href="http://www.jessiesima.com">Jessie Sima</a>. Hosting provided by <a href="http://www.rackspace.com">Rackspace</a>.<br>
+        Questions? Comments? Please contact <a href="mailto:organizers@pygotham.org">organizers@pygotham.org</a>.<br>
+      </section>
+    </footer>
+
+    <script src="../../../static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../../static/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="../../../static/js/app.js"></script>
+  </body>
+</html>
