@@ -1,0 +1,167 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <title>Talk - Dev Environments: The Next Generation - PyGotham 2015</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/css/app.css">
+
+    <meta name="msapplication-TileColor" content="#182833">
+    <meta name="msapplication-TileImage" content="../../../static/img/metro-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../../static/img/apple-touch-icon.png">
+    <link rel="icon" href="../../../static/img/favicon.png">
+
+    <script src="../../../static/bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body class="">
+    <nav class="top-bar" data-topbar data-options="mobile_show_parent_link: false">
+      <ul class="title-area">
+        <li class="name">
+          <h1><a href="../../../index.html">PyGotham 2015</a></h1>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="index.html#"><span>Menu</span></a>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="right">
+
+            <li class="About has-dropdown">
+              <a href="index.html#">About</a>
+              <ul class="dropdown">
+
+                <li><a href="../../../about/code-of-conduct/index.html">Code of Conduct</a></li>
+
+                <li><a href="../../../about/faq/index.html">FAQ</a></li>
+
+                <li><a href="../../../about/privacy-policy/index.html">Privacy Policy</a></li>
+
+                <li><a href="../../../about/social/index.html">Social Event</a></li>
+
+              </ul>
+            </li>
+
+            <li class="Events has-dropdown">
+              <a href="index.html#">Events</a>
+              <ul class="dropdown">
+
+                <li><a href="../../index.html">Talk List</a></li>
+
+                <li><a href="../../schedule/index.html">Talk Schedule</a></li>
+
+              </ul>
+            </li>
+
+            <li class="Registration has-dropdown">
+              <a href="index.html#">Registration</a>
+              <ul class="dropdown">
+
+                <li><a href="../../../registration/information/index.html">Information</a></li>
+
+              </ul>
+            </li>
+
+            <li class="Speaking has-dropdown">
+              <a href="index.html#">Speaking</a>
+              <ul class="dropdown">
+
+                <li><a href="../../call-for-proposals/index.html">Call For Proposals</a></li>
+
+              </ul>
+            </li>
+
+            <li class="Sponsors has-dropdown">
+              <a href="index.html#">Sponsors</a>
+              <ul class="dropdown">
+
+                <li><a href="../../../sponsors/index.html">Sponsors</a></li>
+
+                <li><a href="../../../sponsors/prospectus/index.html">Sponsorship Prospectus</a></li>
+
+              </ul>
+            </li>
+
+            <li class="Venue has-dropdown">
+              <a href="index.html#">Venue</a>
+              <ul class="dropdown">
+
+                <li><a href="../../../about/venue/index.html">Information</a></li>
+
+              </ul>
+            </li>
+
+
+
+
+
+        </ul>
+      </section>
+    </nav>
+
+    <div id="content">
+
+
+
+
+
+
+
+
+
+  <div class="row">
+    <h1>Dev Environments: The Next Generation</h1>
+
+
+      <small>02:30 PM - 03:25 PM on August 16, 2015, Room 705</small>
+
+
+    <h4>
+      <a href="../../../speakers/profile/268/index.html">
+        Travis Thieman
+      </a>
+    </h4>
+
+    <dl>
+      <dt>Audience level:
+      <dd>novice
+
+
+        <dt>Watch:
+        <dd><a href="http://youtu.be/pYLOuuR7HI0">http://youtu.be/pYLOuuR7HI0</a>
+
+    </dl>
+
+    <h3>Description</h3>
+    <p>Development environments are a necessary part of every developer's workflow. They can also be a great source of friction. What may begin as simply running  <cite>python my_app.py</cite> eventually bloats as you add more apps, more databases, more testing frameworks, and more developers. We'll talk about the evolution of a typical development environment, how it lets us down, and how we try to make it better. We'll end with an introduction to Dusty, a new tool which uses Docker containers to take our development environments to the next level.</p>
+
+
+
+      <h3>Abstract</h3>
+      <p>Each of us has one or more development environments which we rely on to help us manage the details of getting code to execute correctly on a machine. Our environments affect everything that we do as developers, so it's crucial that we are able to create and manage effective development environments which do their job well. The alternative is a constant battle against bad tooling which is slowing you down at every turn.</p>
+<p>To understand exactly what makes a "good" environment versus a "bad" one, we'll start with simply running <cite>python my_app.py</cite> and see where we run into problems. This is the easiest way to get something running on our own systems, as we can run ad-hoc commands to install dependencies or fix system issues until our code works. However, this approach makes it impossible to reproduce our results on another machine or share our code with others. Without the proper environment, the code cannot run.</p>
+<p>When the need to share or reproduce the application comes up, the necessary libraries involved in making the code work can be shared through a requirements file and installed in a virtualenv. The isolation of the virtualenv affords some level of reproducibility, but is still subject to the rest of the state presented by the system. Which system libraries are installed? Where are they located? What environment variables are set? These questions all present portability challenges and make it harder for us to share and reproduce our code.</p>
+<p>To solve this problem, we turn to virtual machines, the next evolution in the development environment. We gain more ability to control the environment in which our code executes, and further isolation over the system is achieved. With virtual machines, though, we incur significant costs. VMs are slow and memory-intensive, and managing the VMs themselves is often difficult enough that configuration management software (itself presenting a significant cognitive burden) must be layered on top to keep everything in line. Our development environment has made progress, but we can do better.</p>
+<p>Containers may give us the opportunity to further evolve our development environments. Out of the box, they appear to solve many of the issues with virtual machines. With containers, isolation is simple without incurring the performance impact of running many small VMs. The ecosystem being built around Docker is making this goal more achievable every day. We'll talk about what we might want out of a container-based development environments solution, and introduce Dusty, our attempt to leverage containers to make our development environments better.</p>
+<p>Dusty is MIT licensed and available at <a href="http://dusty.gc.com">http://dusty.gc.com</a></p>
+
+
+  </div>
+
+    </div>
+
+    <footer>
+      <section class="credits">
+        PyGotham 2015 is a production of <a href="http://bigapplepy.org">Big Apple Py</a>.<br>
+        Design by <a href="http://www.jessiesima.com">Jessie Sima</a>. Hosting provided by <a href="http://www.rackspace.com">Rackspace</a>.<br>
+        Questions? Comments? Please contact <a href="mailto:organizers@pygotham.org">organizers@pygotham.org</a>.<br>
+      </section>
+    </footer>
+
+    <script src="../../../static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../../static/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="../../../static/js/app.js"></script>
+  </body>
+</html>
