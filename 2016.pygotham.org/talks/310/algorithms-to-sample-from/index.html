@@ -1,0 +1,180 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <title>Talk - Algorithms to Sample From Streams - PyGotham 2016</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/css/app.css">
+
+    <meta name="msapplication-TileColor" content="#182833">
+    <meta name="msapplication-TileImage" content="/static/img/metro-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../../static/img/apple-touch-icon.png">
+    <link rel="icon" href="../../../static/img/favicon.png">
+
+    <script src="../../../static/bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body class="">
+    <nav class="top-bar" data-topbar data-options="mobile_show_parent_link: false">
+      <ul class="title-area">
+        <li class="name">
+          <a href="../../../" title="PyGotham 2016 Home">
+            <img src="../../../static/img/logo-notext.svg" alt="PyGotham 2016 logo">
+          </a>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="#"><span>Menu</span></a>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="right">
+          
+          <li class="About has-dropdown">
+              <a href="#">About</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/code-of-conduct/">Code of Conduct</a></li>
+                
+                <li><a href="../../../about/faq/">FAQ</a></li>
+                
+                <li><a href="../../../about/privacy-policy/">Privacy Policy</a></li>
+                
+                <li><a href="../../../about/">What is PyGotham?</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Events has-dropdown">
+              <a href="#">Events</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/social/">Social</a></li>
+                
+                <li><a href="../../">Talk List</a></li>
+                
+                <li><a href="../../schedule/">Talk Schedule</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Registration has-dropdown">
+              <a href="#">Registration</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../registration/information/">Information</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Speaking has-dropdown">
+              <a href="#">Speaking</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../call-for-proposals/">Call for Proposals</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Sponsors has-dropdown">
+              <a href="#">Sponsors</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../sponsors/">Sponsors</a></li>
+                
+                <li><a href="../../../sponsors/prospectus/">Sponsorship Prospectus</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Venue has-dropdown">
+              <a href="#">Venue</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/hotels/">Hotels</a></li>
+                
+                <li><a href="../../../about/venue/">Information</a></li>
+                
+              </ul>
+              
+            </li>
+          
+
+
+        </ul>
+      </section>
+    </nav>
+
+    <div id="content">
+      
+        
+  
+    
+  
+
+      
+
+      
+  
+
+  <div class="row">
+    <h1>Algorithms to Sample From Streams</h1>
+
+    
+      <small>04:30 PM - 04:55 PM on July 16, 2016, Room CR6</small>
+    
+
+    <h4>
+      <a href="../../../speakers/profile/508/">
+        Jonathan Arfa
+      </a>
+    </h4>
+
+    <dl>
+      <dt>Audience level:
+      <dd>novice
+      
+      
+    </dl>
+
+    <h3>Description</h3>
+    <p>Sampling is often necessary when you want to understand some aspects of your data but you don’t have the memory or time to analyze the full data set. This is a simple task when your data is on disk - but is much more complicated when your data is an incoming stream of unknown (but very long) length. In this talk I’ll present several methods to do this, some of which get you samples that are unbiased over the entire stream and some of which produce samples that are biased towards the present, and the tradeoffs these algorithms entail.</p>
+
+
+    
+      <h3>Abstract</h3>
+      <p>Those of us who use Python to build systems that ingest constant streams of incoming data (which includes anybody whose code touches the internet) often need algorithms that keep a fixed-size sample from the stream for on-the-fly analytics. At Magnetic we are engaged in real-time bidding for online advertising, which also requires extremely low-latency Python code.</p>
+<p>Reservoir sampling is a commonly used algorithm for keeping a sample that's unbiased over all events in the stream. But what if you want your algorithm to keep a representative sample from the past 10 minutes instead of the entire stream?</p>
+<p>In this talk I'll start with a gentle introduction to reservoir sampling for those who are not familiar with it, and then discuss several variants that keep samples which are biased towards more recent events. One of these is the VIRB (Variable Incoming Rate Biased) sampler, which we have developed in-house at Magnetic.</p>
+<p>The only pre-requisite is that an audience member can read and follow basic Python code. No background is required in Statistics or Data Science, although this talk is highly relevant to Data Scientists.</p>
+
+    
+  </div>
+
+    </div>
+
+    <footer>
+      <section class="credits">
+        PyGotham 2016 is a production of <a href="http://bigapplepy.org">Big Apple Py</a>.<br>
+        Artwork by <a href="http://www.jessiesima.com">Jessie Sima</a>. UX by <a href="https://www.linkedin.com/in/allisonrcameron">Allison Cameron</a>. Hosting provided by <a href="http://www.rackspace.com">Rackspace</a>.<br>
+        Questions? Comments? Please contact <a href="mailto:organizers@pygotham.org">organizers@pygotham.org</a>.<br>
+      </section>
+    </footer>
+
+    <script src="../../../static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../../static/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="../../../static/js/app.js"></script>
+  </body>
+</html>

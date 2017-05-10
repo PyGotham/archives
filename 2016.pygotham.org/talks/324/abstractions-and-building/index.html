@@ -1,0 +1,180 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <title>Talk - Abstractions and building up: A case study with chess_py, an open source chess platform  - PyGotham 2016</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/css/app.css">
+
+    <meta name="msapplication-TileColor" content="#182833">
+    <meta name="msapplication-TileImage" content="/static/img/metro-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../../static/img/apple-touch-icon.png">
+    <link rel="icon" href="../../../static/img/favicon.png">
+
+    <script src="../../../static/bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body class="">
+    <nav class="top-bar" data-topbar data-options="mobile_show_parent_link: false">
+      <ul class="title-area">
+        <li class="name">
+          <a href="../../../" title="PyGotham 2016 Home">
+            <img src="../../../static/img/logo-notext.svg" alt="PyGotham 2016 logo">
+          </a>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="#"><span>Menu</span></a>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="right">
+          
+          <li class="About has-dropdown">
+              <a href="#">About</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/code-of-conduct/">Code of Conduct</a></li>
+                
+                <li><a href="../../../about/faq/">FAQ</a></li>
+                
+                <li><a href="../../../about/privacy-policy/">Privacy Policy</a></li>
+                
+                <li><a href="../../../about/">What is PyGotham?</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Events has-dropdown">
+              <a href="#">Events</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/social/">Social</a></li>
+                
+                <li><a href="../../">Talk List</a></li>
+                
+                <li><a href="../../schedule/">Talk Schedule</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Registration has-dropdown">
+              <a href="#">Registration</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../registration/information/">Information</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Speaking has-dropdown">
+              <a href="#">Speaking</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../call-for-proposals/">Call for Proposals</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Sponsors has-dropdown">
+              <a href="#">Sponsors</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../sponsors/">Sponsors</a></li>
+                
+                <li><a href="../../../sponsors/prospectus/">Sponsorship Prospectus</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Venue has-dropdown">
+              <a href="#">Venue</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/hotels/">Hotels</a></li>
+                
+                <li><a href="../../../about/venue/">Information</a></li>
+                
+              </ul>
+              
+            </li>
+          
+
+
+        </ul>
+      </section>
+    </nav>
+
+    <div id="content">
+      
+        
+  
+    
+  
+
+      
+
+      
+  
+
+  <div class="row">
+    <h1>Abstractions and building up: A case study with chess_py, an open source chess platform </h1>
+
+    
+      <small>01:45 PM - 02:10 PM on July 17, 2016, Room CR5</small>
+    
+
+    <h4>
+      <a href="../../../speakers/profile/517/">
+        Aubhro Sengupta
+      </a>
+    </h4>
+
+    <dl>
+      <dt>Audience level:
+      <dd>novice
+      
+      
+        <dt>Watch:
+        <dd><a href="https://www.youtube.com/watch?v=87vhc96OSFQ">https://www.youtube.com/watch?v=87vhc96OSFQ</a>
+      
+    </dl>
+
+    <h3>Description</h3>
+    <p>Programming can seem difficult because of the enormous level of abstraction involved. Objects are being dealt with that have very little to do with the real world. They are hard to grasp, touch, and feel. Chess on the other hand is a very concrete and physical game. Objects such as the board, pieces, and even logic such as the basic rules of the game are much easier to understand. How the pieces in chess interact, their capabilities, and their placement on the board can be similar to the way objects interact in python. Using chess_py, an open source platform for chess written by me in python, we can delve into the different classes and data structures to understand how they work and gain a deeper understanding of the language of python.</p>
+
+
+    
+      <h3>Abstract</h3>
+      <p>Programming is complex and can seem disconnected from reality. Objects, methods of storing data, and following the flow of a project can seem daunting. The basics of chess is far easier to understand. There is a well-defined board, containing well-defined pieces that follow well-defined rules. And it is all in the real world. Chess_py is a platform for chess that converts all of that to code. A game object is created using player objects. These player objects can either be human, in which case a person must enter moves into the console, or artificial intelligence, in which case the artificial intelligence returns the move it would make given the position. When a player gives the game object a move, it is stored as a move object, which is then validated. The board is stored as an object, and it holds all the piece objects. These piece objects know how they are moved, and are capable of returning the all of their possible moves in a given position. If the given move matches one of the possible moves of the piece on the board, it is legal. The board is changed to reflect the new position. Some external code detects when the game ends and the result. Data such as the board and player color are stored with standard data types such as lists and booleans. However, they are built into wrapper classes that allow the rest of chess_py to read and manipulate the data with ease, especially in the context of chess. Chess_py is essentially an abstraction of the game of chess, containing abstractions of the components of chess. Understanding it can help us better understand the nature of Python. This abstraction is also a foundation. Chess_py allows for a simple way for a chess playing program or any other sort of software to interface with it. As long as that software can provide legal moves stored in the type of object chess_py uses to store objects, it can play chess without having to worry about any of the lower level work. This is highly important as it allows software to build on top of each other to do complex tasks relatively simply. If classes, objects, and functions did not exist in python, creating a program that simply plays chess would be a nightmare. Abstractions allow us to modularize our code to make it much easier to focus on the task at hand instead of working from the ground up.</p>
+
+    
+  </div>
+
+    </div>
+
+    <footer>
+      <section class="credits">
+        PyGotham 2016 is a production of <a href="http://bigapplepy.org">Big Apple Py</a>.<br>
+        Artwork by <a href="http://www.jessiesima.com">Jessie Sima</a>. UX by <a href="https://www.linkedin.com/in/allisonrcameron">Allison Cameron</a>. Hosting provided by <a href="http://www.rackspace.com">Rackspace</a>.<br>
+        Questions? Comments? Please contact <a href="mailto:organizers@pygotham.org">organizers@pygotham.org</a>.<br>
+      </section>
+    </footer>
+
+    <script src="../../../static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../../static/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="../../../static/js/app.js"></script>
+  </body>
+</html>

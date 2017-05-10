@@ -1,0 +1,180 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <title>Talk - Fighting the Flu with Machine Learning - PyGotham 2016</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/css/app.css">
+
+    <meta name="msapplication-TileColor" content="#182833">
+    <meta name="msapplication-TileImage" content="/static/img/metro-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../../static/img/apple-touch-icon.png">
+    <link rel="icon" href="../../../static/img/favicon.png">
+
+    <script src="../../../static/bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body class="">
+    <nav class="top-bar" data-topbar data-options="mobile_show_parent_link: false">
+      <ul class="title-area">
+        <li class="name">
+          <a href="../../../" title="PyGotham 2016 Home">
+            <img src="../../../static/img/logo-notext.svg" alt="PyGotham 2016 logo">
+          </a>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="#"><span>Menu</span></a>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="right">
+          
+          <li class="About has-dropdown">
+              <a href="#">About</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/code-of-conduct/">Code of Conduct</a></li>
+                
+                <li><a href="../../../about/faq/">FAQ</a></li>
+                
+                <li><a href="../../../about/privacy-policy/">Privacy Policy</a></li>
+                
+                <li><a href="../../../about/">What is PyGotham?</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Events has-dropdown">
+              <a href="#">Events</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/social/">Social</a></li>
+                
+                <li><a href="../../">Talk List</a></li>
+                
+                <li><a href="../../schedule/">Talk Schedule</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Registration has-dropdown">
+              <a href="#">Registration</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../registration/information/">Information</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Speaking has-dropdown">
+              <a href="#">Speaking</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../call-for-proposals/">Call for Proposals</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Sponsors has-dropdown">
+              <a href="#">Sponsors</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../sponsors/">Sponsors</a></li>
+                
+                <li><a href="../../../sponsors/prospectus/">Sponsorship Prospectus</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Venue has-dropdown">
+              <a href="#">Venue</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/hotels/">Hotels</a></li>
+                
+                <li><a href="../../../about/venue/">Information</a></li>
+                
+              </ul>
+              
+            </li>
+          
+
+
+        </ul>
+      </section>
+    </nav>
+
+    <div id="content">
+      
+        
+  
+    
+  
+
+      
+
+      
+  
+
+  <div class="row">
+    <h1>Fighting the Flu with Machine Learning</h1>
+
+    
+      <small>05:00 PM - 05:25 PM on July 16, 2016, Room CR5</small>
+    
+
+    <h4>
+      <a href="../../../speakers/profile/467/">
+        Rohan Koodli
+      </a>
+    </h4>
+
+    <dl>
+      <dt>Audience level:
+      <dd>novice
+      
+      
+        <dt>Watch:
+        <dd><a href="https://www.youtube.com/watch?v=6lGgIiTAmss">https://www.youtube.com/watch?v=6lGgIiTAmss</a>
+      
+    </dl>
+
+    <h3>Description</h3>
+    <p>Everyone despises falling sick. In this talk, I will present how I used Python and machine learning to predict future sequences of the flu. My Random Forests model learns patterns in how the flu mutates from previous flu seasons, and creates decision trees based on those inferences. I will also cover how using a library (scikit-learn) was much easier and accurate than creating a Random Forests Classifier.</p>
+
+
+    
+      <h3>Abstract</h3>
+      <p>I created a machine learning algorithm which can predict flu strain sequences in future flu seasons. In my talk, I will show how I used Python to implement my flu prediction algorithm, as well as how I used libraries to make my algorithm more efficient and simpler. To create my algorithm, I first had to obtain the genetic sequences of the flu. I used the Biopython library to read the genetic sequences, each of which is over 1700 base pairs long. Then, I began making my Random Forests algorithm. I trained my algorithm on the grandparent-parent-child relationships between influenza strains. However, I found that my algorithm did not predict with very good accuracy as my algorithm often overfit my gene sequence data, so I started using the scikit-learn Random Forests algorithm instead. This was much easier to write and predicted much more accurately than my previous algorithm. However, I did lose some accuracy, as I could only include parent-child relationships of flu strains. Currently, my model with the scikit-learn Random Forests Algorithm has an accuracy of 93% when predicting future strains of the flu (H1N1 and H3N2 flu subtypes, specifically).</p>
+
+    
+  </div>
+
+    </div>
+
+    <footer>
+      <section class="credits">
+        PyGotham 2016 is a production of <a href="http://bigapplepy.org">Big Apple Py</a>.<br>
+        Artwork by <a href="http://www.jessiesima.com">Jessie Sima</a>. UX by <a href="https://www.linkedin.com/in/allisonrcameron">Allison Cameron</a>. Hosting provided by <a href="http://www.rackspace.com">Rackspace</a>.<br>
+        Questions? Comments? Please contact <a href="mailto:organizers@pygotham.org">organizers@pygotham.org</a>.<br>
+      </section>
+    </footer>
+
+    <script src="../../../static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../../static/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="../../../static/js/app.js"></script>
+  </body>
+</html>
