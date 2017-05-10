@@ -1,0 +1,183 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <title>Talk - We&#39;re All Database Engineers (WADE) - PyGotham 2016</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/css/app.css">
+
+    <meta name="msapplication-TileColor" content="#182833">
+    <meta name="msapplication-TileImage" content="/static/img/metro-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../../static/img/apple-touch-icon.png">
+    <link rel="icon" href="../../../static/img/favicon.png">
+
+    <script src="../../../static/bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body class="">
+    <nav class="top-bar" data-topbar data-options="mobile_show_parent_link: false">
+      <ul class="title-area">
+        <li class="name">
+          <a href="../../../" title="PyGotham 2016 Home">
+            <img src="../../../static/img/logo-notext.svg" alt="PyGotham 2016 logo">
+          </a>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="#"><span>Menu</span></a>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="right">
+          
+          <li class="About has-dropdown">
+              <a href="#">About</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/code-of-conduct/">Code of Conduct</a></li>
+                
+                <li><a href="../../../about/faq/">FAQ</a></li>
+                
+                <li><a href="../../../about/privacy-policy/">Privacy Policy</a></li>
+                
+                <li><a href="../../../about/">What is PyGotham?</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Events has-dropdown">
+              <a href="#">Events</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/social/">Social</a></li>
+                
+                <li><a href="../../">Talk List</a></li>
+                
+                <li><a href="../../schedule/">Talk Schedule</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Registration has-dropdown">
+              <a href="#">Registration</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../registration/information/">Information</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Speaking has-dropdown">
+              <a href="#">Speaking</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../call-for-proposals/">Call for Proposals</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Sponsors has-dropdown">
+              <a href="#">Sponsors</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../sponsors/">Sponsors</a></li>
+                
+                <li><a href="../../../sponsors/prospectus/">Sponsorship Prospectus</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Venue has-dropdown">
+              <a href="#">Venue</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/hotels/">Hotels</a></li>
+                
+                <li><a href="../../../about/venue/">Information</a></li>
+                
+              </ul>
+              
+            </li>
+          
+
+
+        </ul>
+      </section>
+    </nav>
+
+    <div id="content">
+      
+        
+  
+    
+  
+
+      
+
+      
+  
+
+  <div class="row">
+    <h1>We&#39;re All Database Engineers (WADE)</h1>
+
+    
+      <small>02:15 PM - 03:10 PM on July 17, 2016, Room CR6</small>
+    
+
+    <h4>
+      <a href="../../../speakers/profile/572/">
+        Adrian Kramer
+      </a>
+    </h4>
+
+    <dl>
+      <dt>Audience level:
+      <dd>intermediate
+      
+      
+        <dt>Watch:
+        <dd><a href="https://www.youtube.com/watch?v=8cR1lSdic0Q">https://www.youtube.com/watch?v=8cR1lSdic0Q</a>
+      
+    </dl>
+
+    <h3>Description</h3>
+    <p>WADE is a distributed database framework providing strong consistency and high throughput using chain replication, in lieu of the traditional primary/backup model. Quite unlike traditional databases, WADE is a framework. Programmers implement the storage interface themselves and write custom query or update functions in Python that are executed by the database avoiding the dreaded read-write update cycle that degrades performance. Since the storage layer is implemented by the programmer it can be hand customized to the use case at hand using tools such as LevelDB, RocksDB, or whatever the programmer desires. However, WADE takes control at the networking layer handling replication, message forwarding amongst nodes, and fault tolerance in the event of failure so long as a few simple functions are implemented by the end user.</p>
+
+
+    
+      <h3>Abstract</h3>
+      <p>At Chartbeat, we process 300,000 events per second, measure the attention of some 10 million concurrent users across our network, and aggregate statistics about 50 billion page views a month on many of the top news publishing sites in the world today. Finding a database to ingest and serve up the data is difficult with few providing us with a performant and cost effective way to store and query our data at scale. Additionally, the complexity of many of these databases makes it very difficult to reason about the performance and debug issues without outside support.</p>
+<p>Many of you would call us crazy, but these problems led our CTO Wes Chow to think about writing our own database to handle the unique cases of our data. But WADE is not a database, it is a framework. It does not provide a storage layer, a query language, or even an interface to query or update it. Instead, the programmer implements the storage interface herself (or keep it in memory! it's up to you!) and provides a set of query and update functions that live on and are executed by nodes in the database. What WADE provides is the hard part of distributed databases: replication, consistency, horizontal scalability, fault tolerance, and recovery.</p>
+<p>WADE is a developer’s best friend. Simplicity, correctness, and debuggability are first class concerns to an extent not found in commercial databases. Those principles dictate the design and selection of algorithms in a way that makes it comfortable for an application engineer to customize and debug the system in the field. WADE allows, scratch that, <em>wants</em> you to pop open the jalopy's hood and see what's going on as it flies over potholes down the freeway.</p>
+<p>This talk covers a mix of real world use cases, the database theory and algorithms that underpin the system, and demonstrates a simple but fault tolerant and scalable in-memory key-value store.</p>
+
+    
+  </div>
+
+    </div>
+
+    <footer>
+      <section class="credits">
+        PyGotham 2016 is a production of <a href="http://bigapplepy.org">Big Apple Py</a>.<br>
+        Artwork by <a href="http://www.jessiesima.com">Jessie Sima</a>. UX by <a href="https://www.linkedin.com/in/allisonrcameron">Allison Cameron</a>. Hosting provided by <a href="http://www.rackspace.com">Rackspace</a>.<br>
+        Questions? Comments? Please contact <a href="mailto:organizers@pygotham.org">organizers@pygotham.org</a>.<br>
+      </section>
+    </footer>
+
+    <script src="../../../static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../../static/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="../../../static/js/app.js"></script>
+  </body>
+</html>

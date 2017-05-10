@@ -1,0 +1,181 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <title>Talk - Push Data, Pull Data, Present Data - PyGotham 2016</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/css/app.css">
+
+    <meta name="msapplication-TileColor" content="#182833">
+    <meta name="msapplication-TileImage" content="/static/img/metro-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../../static/img/apple-touch-icon.png">
+    <link rel="icon" href="../../../static/img/favicon.png">
+
+    <script src="../../../static/bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body class="">
+    <nav class="top-bar" data-topbar data-options="mobile_show_parent_link: false">
+      <ul class="title-area">
+        <li class="name">
+          <a href="../../../" title="PyGotham 2016 Home">
+            <img src="../../../static/img/logo-notext.svg" alt="PyGotham 2016 logo">
+          </a>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="#"><span>Menu</span></a>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="right">
+          
+          <li class="About has-dropdown">
+              <a href="#">About</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/code-of-conduct/">Code of Conduct</a></li>
+                
+                <li><a href="../../../about/faq/">FAQ</a></li>
+                
+                <li><a href="../../../about/privacy-policy/">Privacy Policy</a></li>
+                
+                <li><a href="../../../about/">What is PyGotham?</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Events has-dropdown">
+              <a href="#">Events</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/social/">Social</a></li>
+                
+                <li><a href="../../">Talk List</a></li>
+                
+                <li><a href="../../schedule/">Talk Schedule</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Registration has-dropdown">
+              <a href="#">Registration</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../registration/information/">Information</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Speaking has-dropdown">
+              <a href="#">Speaking</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../call-for-proposals/">Call for Proposals</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Sponsors has-dropdown">
+              <a href="#">Sponsors</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../sponsors/">Sponsors</a></li>
+                
+                <li><a href="../../../sponsors/prospectus/">Sponsorship Prospectus</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Venue has-dropdown">
+              <a href="#">Venue</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/hotels/">Hotels</a></li>
+                
+                <li><a href="../../../about/venue/">Information</a></li>
+                
+              </ul>
+              
+            </li>
+          
+
+
+        </ul>
+      </section>
+    </nav>
+
+    <div id="content">
+      
+        
+  
+    
+  
+
+      
+
+      
+  
+
+  <div class="row">
+    <h1>Push Data, Pull Data, Present Data</h1>
+
+    
+      <small>10:00 AM - 10:25 AM on July 16, 2016, Room CR4</small>
+    
+
+    <h4>
+      <a href="../../../speakers/profile/260/">
+        Adrian Cruz
+      </a>
+    </h4>
+
+    <dl>
+      <dt>Audience level:
+      <dd>intermediate
+      
+      
+    </dl>
+
+    <h3>Description</h3>
+    <p>In this day and age, data plays such an important role in so much of what we want to do. Whether it be an analysis of visitor traffic, monitoring data for fraud transactions, or making a business decision of whether a certain color would be accepted with your users, the data is your best friend in helping you find your way.</p>
+
+
+    
+      <h3>Abstract</h3>
+      <p>It's morning, you settle in, check your dashboards and it looks like there is an increase of load  coming through on some of your web server logs. What happened? You're about to deploy code that will hopefully fix some issues; how will you know that things worked well? The design team is thinking about changing some of the site icons; do your users like seeing big icons or small icons on your site? These are all scenarios that are all too common and the one thing that helps you answer these is your data.</p>
+<p>Pushing data is typically easy. If you're tracking tracking events on a website, you'll probably want to know a lot about click tracking, URL referrals, and user sessions. If you're curious about the number of downloads your users go through per day, you'll probably have some data that you can aggregate a sum. Your data can be small or large or anything in between, but making it available is the most important piece that you'll need to have.</p>
+<p>Pulling data can be a bit more complex. Do you have a small amount of data that you're just pulling from a relational database? Or are you processing  data through Hadoop or Spark? Data is what you want; how you pull it is dependent on your architecture needs.</p>
+<p>Presenting data is a simple task, but are you presenting the correct story? Whether you are presenting your web traffic or your user behavior data, you'll want to present your data that tells the story you want to tell in the best way.</p>
+<p>Push data, pull data, present data; these are your main tasks in your typical cycle of product development and analysis. We built out a fairly quick data pipeline using Airflow, a workflow framework made by Airbnb. We push a lot of data so we can make good data-driven business decisions. Pulling data and presenting them have gone hand-in-hand for us. We have utilized Google's BigQuery in order for us to have a fast, columnar data store in order for us to build out dashboards to visualize our data. This will shed light into what a typical push-pull-present cycle looks like and will be exemplified with real-world examples.</p>
+
+    
+  </div>
+
+    </div>
+
+    <footer>
+      <section class="credits">
+        PyGotham 2016 is a production of <a href="http://bigapplepy.org">Big Apple Py</a>.<br>
+        Artwork by <a href="http://www.jessiesima.com">Jessie Sima</a>. UX by <a href="https://www.linkedin.com/in/allisonrcameron">Allison Cameron</a>. Hosting provided by <a href="http://www.rackspace.com">Rackspace</a>.<br>
+        Questions? Comments? Please contact <a href="mailto:organizers@pygotham.org">organizers@pygotham.org</a>.<br>
+      </section>
+    </footer>
+
+    <script src="../../../static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../../static/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="../../../static/js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,185 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <title>Talk - Python for Home-Ec - PyGotham 2016</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/css/app.css">
+
+    <meta name="msapplication-TileColor" content="#182833">
+    <meta name="msapplication-TileImage" content="/static/img/metro-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../../static/img/apple-touch-icon.png">
+    <link rel="icon" href="../../../static/img/favicon.png">
+
+    <script src="../../../static/bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body class="">
+    <nav class="top-bar" data-topbar data-options="mobile_show_parent_link: false">
+      <ul class="title-area">
+        <li class="name">
+          <a href="../../../" title="PyGotham 2016 Home">
+            <img src="../../../static/img/logo-notext.svg" alt="PyGotham 2016 logo">
+          </a>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="#"><span>Menu</span></a>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="right">
+          
+          <li class="About has-dropdown">
+              <a href="#">About</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/code-of-conduct/">Code of Conduct</a></li>
+                
+                <li><a href="../../../about/faq/">FAQ</a></li>
+                
+                <li><a href="../../../about/privacy-policy/">Privacy Policy</a></li>
+                
+                <li><a href="../../../about/">What is PyGotham?</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Events has-dropdown">
+              <a href="#">Events</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/social/">Social</a></li>
+                
+                <li><a href="../../">Talk List</a></li>
+                
+                <li><a href="../../schedule/">Talk Schedule</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Registration has-dropdown">
+              <a href="#">Registration</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../registration/information/">Information</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Speaking has-dropdown">
+              <a href="#">Speaking</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../call-for-proposals/">Call for Proposals</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Sponsors has-dropdown">
+              <a href="#">Sponsors</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../sponsors/">Sponsors</a></li>
+                
+                <li><a href="../../../sponsors/prospectus/">Sponsorship Prospectus</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Venue has-dropdown">
+              <a href="#">Venue</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/hotels/">Hotels</a></li>
+                
+                <li><a href="../../../about/venue/">Information</a></li>
+                
+              </ul>
+              
+            </li>
+          
+
+
+        </ul>
+      </section>
+    </nav>
+
+    <div id="content">
+      
+        
+  
+    
+  
+
+      
+
+      
+  
+
+  <div class="row">
+    <h1>Python for Home-Ec</h1>
+
+    
+      <small>04:00 PM - 04:25 PM on July 17, 2016, Room CR6</small>
+    
+
+    <h4>
+      <a href="../../../speakers/profile/254/">
+        Adam Forsyth
+      </a>
+    </h4>
+
+    <dl>
+      <dt>Audience level:
+      <dd>novice
+      
+      
+    </dl>
+
+    <h3>Description</h3>
+    <blockquote>
+Have you ever tried to make something with scrap wood, and wondered how to use it optimally? Do have a bunch of pickles and jams you made, and you want to eat them in an order that maximizes variety? These are real problems a co-worker of mine had, and we used Python to solve them. I'll show the data we started with, the solutions we came up with, and a bit of the computer science behind them.</blockquote>
+
+
+    
+      <h3>Abstract</h3>
+      <p>My co-worker Jonathan is a programmer, farmer, and do-it-yourselfer. Last fall, he had two problems he was trying to solve. The first was how to make a countertop with some scrap wood he had left over. The second was how to portion out the variety of pickles, jams, and sauces from his farm week-by-week over the winter to maximize variety. He recognized these were problems a computer could help him solve, and even wrote a solution for binning the preserves, but it didn't work well. Together, we wrote solutions in Python that gave him much better results that without computer help.</p>
+<p>First, the "scrap wood" problem. Say you've got a bunch of pieces of wood. You need a bunch of pieces of various lengths, shorter than the pieces you have to work with. Since the lengths you need don't add up exactly to the pieces you have, if you don't do it right, you're going to end up with a bunch of short pieces cut off and have to glue them together to make the last few pieces.</p>
+<p>In the knapsack problem, you have a bunch of items of various weights and values, and you're trying to fit as much value into a knapsack as possible without exceeding its weight limit. If you now imagine many knapsacks with different limits (the pieces of wood we have to work with) and that the items weights each equal their values (since the lengths we need to cut don't have a separate cost from their length), you have our problem.</p>
+<p>The simplest approximation for solving the multiple knapsack problem is greedy reduction. Starting with the longest length we need, take it from the shortest piece that will accommodate it.  This method guarantees you use at least 50% of the length if possible, but isn't near optimal. For our problem, it almost works -- and by reordering the pieces of wood slightly we can make it work. Sometimes, an approximate solution is good enough.</p>
+<p>So now let's say you have a bunch of jars of food -- different numbers of each type. You are going to be eating them all winter, so you want to space out jars of the same type as far apart as possible, to maximize the variety you're eating on a weekly basis. You're going to eat the same number each week so that you can spread them out evenly until you start getting fresh produce in the summer. Jonathan had written code to solve this problem that worked well enough for types of food with a lot of jars, but not so well for ones with lower numbers of jars.</p>
+<p>So we want the jars of the same type to be as far apart as possible. If we imagine time as a line, and the jars as points on it, those points are pushing against each other, trying to get as far apart as possible on the line --they're like magnets repelling each other, and we want to reduce how hard they push against each other by getting them evenly spaced as far apart as possible. If this sounds familiar to anyone, that's because a well known approximation technique, simulated annealing, is simulating exactly this -- particles trying to maximize their distance apart so as to minimize the energy of the system. Simulated annealing is used to find approximate solutions to problems where trying to find the best solution may result in it getting worse before it gets better.</p>
+<p>In this case though, we didn't use simulated annealing at all. We only needed a solution that was "good enough", and we thought of a simple method to try to achieve that. Starting with the type of food we have the most of, insert them into a list equally spaced throughout, then repeat with less and less common types of food. This results in an even spacing regardless of the specific numbers you have of each type of food.</p>
+<p>Each of these problems benefited from a computer-assisted solution, despite involving no big data and only a small amount of calculation. A little knowledge of programming can take you a long way when the job is optimization.</p>
+
+    
+  </div>
+
+    </div>
+
+    <footer>
+      <section class="credits">
+        PyGotham 2016 is a production of <a href="http://bigapplepy.org">Big Apple Py</a>.<br>
+        Artwork by <a href="http://www.jessiesima.com">Jessie Sima</a>. UX by <a href="https://www.linkedin.com/in/allisonrcameron">Allison Cameron</a>. Hosting provided by <a href="http://www.rackspace.com">Rackspace</a>.<br>
+        Questions? Comments? Please contact <a href="mailto:organizers@pygotham.org">organizers@pygotham.org</a>.<br>
+      </section>
+    </footer>
+
+    <script src="../../../static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../../static/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="../../../static/js/app.js"></script>
+  </body>
+</html>

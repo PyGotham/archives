@@ -1,0 +1,179 @@
+
+
+<!doctype html>
+<html>
+  <head>
+    <title>Talk - Distributed Python with Dask - PyGotham 2016</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../../static/css/app.css">
+
+    <meta name="msapplication-TileColor" content="#182833">
+    <meta name="msapplication-TileImage" content="/static/img/metro-icon.png">
+    <link rel="apple-touch-icon-precomposed" href="../../../static/img/apple-touch-icon.png">
+    <link rel="icon" href="../../../static/img/favicon.png">
+
+    <script src="../../../static/bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body class="">
+    <nav class="top-bar" data-topbar data-options="mobile_show_parent_link: false">
+      <ul class="title-area">
+        <li class="name">
+          <a href="../../../" title="PyGotham 2016 Home">
+            <img src="../../../static/img/logo-notext.svg" alt="PyGotham 2016 logo">
+          </a>
+        </li>
+        <li class="toggle-topbar menu-icon">
+          <a href="#"><span>Menu</span></a>
+        </li>
+      </ul>
+
+      <section class="top-bar-section">
+        <ul class="right">
+          
+          <li class="About has-dropdown">
+              <a href="#">About</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/code-of-conduct/">Code of Conduct</a></li>
+                
+                <li><a href="../../../about/faq/">FAQ</a></li>
+                
+                <li><a href="../../../about/privacy-policy/">Privacy Policy</a></li>
+                
+                <li><a href="../../../about/">What is PyGotham?</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Events has-dropdown">
+              <a href="#">Events</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/social/">Social</a></li>
+                
+                <li><a href="../../">Talk List</a></li>
+                
+                <li><a href="../../schedule/">Talk Schedule</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Registration has-dropdown">
+              <a href="#">Registration</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../registration/information/">Information</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Speaking has-dropdown">
+              <a href="#">Speaking</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../call-for-proposals/">Call for Proposals</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Sponsors has-dropdown">
+              <a href="#">Sponsors</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../sponsors/">Sponsors</a></li>
+                
+                <li><a href="../../../sponsors/prospectus/">Sponsorship Prospectus</a></li>
+                
+              </ul>
+              
+            </li>
+          
+          <li class="Venue has-dropdown">
+              <a href="#">Venue</a>
+              
+              <ul class="dropdown">
+                
+                <li><a href="../../../about/hotels/">Hotels</a></li>
+                
+                <li><a href="../../../about/venue/">Information</a></li>
+                
+              </ul>
+              
+            </li>
+          
+
+
+        </ul>
+      </section>
+    </nav>
+
+    <div id="content">
+      
+        
+  
+    
+  
+
+      
+
+      
+  
+
+  <div class="row">
+    <h1>Distributed Python with Dask</h1>
+
+    
+      <small>04:30 PM - 05:25 PM on July 17, 2016, Room CR4</small>
+    
+
+    <h4>
+      <a href="../../../speakers/profile/570/">
+        Matthew Rocklin
+      </a>
+    </h4>
+
+    <dl>
+      <dt>Audience level:
+      <dd>advanced
+      
+      
+    </dl>
+
+    <h3>Description</h3>
+    <p>Dask is a Python library for parallel and distributed computing.  It was built with the needs of the numeric Python ecosystem in mind, emphasizing common interfaces (NumPy, Pandas, Toolz) and full flexibly in supporting custom analytic workloads and complex algorithms.  This talk describes the motivations behind creating Dask, gives interactive examples of its use, talks about how it is used in practice, and compares its capabilities against other parallel computing frameworks.</p>
+
+
+    
+      <h3>Abstract</h3>
+      <p>The numeric Python ecosystem contains fast and intuitive libraries that find wide use in a broad variety of applications.  However, these libraries were mostly designed for data that fits in memory and for computations that run on a single core.  This original design makes them sub-optimal for use on multi-core machines or on distributed clusters.  While straightforward subsets of this software ecosystem can be parallelized using standard data engineering frameworks (MapReduce, Spark, Storm) the more advanced analytic algorithms remain awkward to parallelize with existing tools.</p>
+<p>Dask is a Python library designed to complement the existing Python data science ecosystem with parallel computing.  In order to support sophisticated algorithms, Dask employs a very generic task scheduling system, similar to what is found in Luigi or Airflow, but optimized for fast numeric computations operating at the sub-millisecond level.  This, combined with friendly interfaces and asynchronous programming creates a fresh and flexible parallel programming experience capable of handling both the more numeric side of Python, and also custom workflows.</p>
+<p>In this talk we describe the state of parallelism within the numeric Python stack, the motivations behind Dask, and show interactive examples using the library in a variety of real world contexts.</p>
+
+    
+  </div>
+
+    </div>
+
+    <footer>
+      <section class="credits">
+        PyGotham 2016 is a production of <a href="http://bigapplepy.org">Big Apple Py</a>.<br>
+        Artwork by <a href="http://www.jessiesima.com">Jessie Sima</a>. UX by <a href="https://www.linkedin.com/in/allisonrcameron">Allison Cameron</a>. Hosting provided by <a href="http://www.rackspace.com">Rackspace</a>.<br>
+        Questions? Comments? Please contact <a href="mailto:organizers@pygotham.org">organizers@pygotham.org</a>.<br>
+      </section>
+    </footer>
+
+    <script src="../../../static/bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../../../static/bower_components/foundation/js/foundation.min.js"></script>
+    <script src="../../../static/js/app.js"></script>
+  </body>
+</html>
